@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tasty Web</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">  
+<link rel="stylesheet" href="{{url_for('static', filename='content.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider2-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider3-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider4-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider5-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='popular-recipe.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='submit-style.css')}}">
+
+
+  </head>
+  <body>
+    <!--<footer>
+      <div class="bottom-div"> </div>
+        <span class="follow-us">Follow Us</span>
+        <span class="facebook">Facebook</span>
+        <span class="instagram">Instagram</span>
+        <span class="x">X | Twitter</span>
+        <span class="youtube">Youtube</span>
+    
+        <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdd6e7462bdc1e74ee01709f00218ee1c5ebd1211398186c144b83cf2898dd99?"
+      class="fbook"/>
+      <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/18bf661a9fe4de09e88b289acb4d07ef391c3c73f00b769014c53f4c50c8af0d?"
+      class="insta"/>
+      <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fded50252f3311faf8ba7a176640a2132d9b53fb09a8cb046df011013f6e46f?"
+      class="tweet"/>
+      <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/3665e16cde61d69a595cf6affaeda5b68b31011d004818595bea2c19285404a2?"
+      class="yt"/>
+      <div class="appStore"></div>
+      <div class="google-store"></div>
+      <span class="feedback">Send Feedback</span>
+      <span class="recipe-ingredient">Recipes by Ingredient</span>
+      <span class="community-recipe">Community Recipes</span>
+      <span class="privacy-policy">Privacy Policy</span>
+      <span class="user-agreement">User Agreement</span>
+      <span class="statement">Accessiblity Statement</span>
+      <span class="values">Our Tasty Values</span>
+      <div class="v41_322"></div>
+      <span class="v41_346">© 2023 BuzzFeed, Inc</span>
+   
+    </footer>-->
+
+    <header class="header">
+      <div class="header-row container" role="navigation" aria-label="Main">
+          <div class="header-left">
+              <div class="logo">
+                  <a href="{{url_for ('index')}}"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="logo"></a>
+              </div>
+          </div>
+          <div class="header-right">
+            <ul class="main-menu">
+              <!--<li class="menu-item"><a href="#" class="active">Home</a></li>-->
+              <li class="menu-item mega-menu">
+                <a href="#">Recipes
+                  <span class="drop_down material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                </a>
+                <div class="mega-menu-wrapper slideInUp">
+                  <div class="mega-menu-col">
+                    <h5>Popular</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="{{url_for('popular_recipe')}}">Getting Back to Basics</a></li>
+                      <li><a href="#">Easy Dinners</a></li>
+                      <li><a href="#">Work Lunches</a></li>
+                      <li><a href="#">5 Ingredient Meals</a></li>
+                      <li><a href="#">St. Patrick's Day</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Right Now</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Slow Cooker Recipes</a></li>
+                      <li><a href="#">Latest Recipes</a></li>
+                      <li><a href="#">Family Dinners</a></li>
+                      <li><a href="#">Plant-Based Meals</a></li>
+                      <li><a href="#">Date Night</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Ingredients</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Chicken</a></li>
+                      <li><a href="#">Pasta</a></li>
+                      <li><a href="#">Pineapple</a></li>
+                      <li><a href="#">Potato</a></li>
+                      <li><a href="#">Beef</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Diet</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Health</a></li>
+                      <li><a href="#">Vegetarian</a></li>
+                      <li><a href="#">Low Carb</a></li>
+                      <li><a href="#">High Protein</a></li>
+                      <li><a href="#">Vegan</a></li>
+                    </ul>
+                  </div>
+
+                  <li class="menu-item mega-menu">
+                    <a href="#">Tips & Tricks 
+                      <span class="drop_down material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                    </a>
+                    <div class="mega-menu-wrapper slideInUp">
+                      <div class="mega-menu-col">
+                        <h5>Food Hacks</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">Flavor Hacks</a></li>
+                          <li><a href="#">Storage Hacks</a></li>
+                          <li><a href="#">Baking Hacks</a></li>
+                          <li><a href="#">Egg Hacks</a></li>
+                          <li><a href="#">Pizza Hacks</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Appliance Cooking</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">Instant Pot Tricks</a></li>
+                          <li><a href="#">Crock Pot Pasta</a></li>
+                          <li><a href="#">Air Fryer Recipes</a></li>
+                          <li><a href="#">Microwave Meals</a></li>
+                          <li><a href="#">Food Processor Hacks</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Kitchen Tips & Skills</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="{{url_for('Tips_Tricks')}}">Our Best Everyday Tips</a></li>
+                          <li><a href="#">Mistakes to Avoid</a></li>
+                          <li><a href="#">Advice from Chefs</a></li>
+                          <li><a href="#">Baking Basics</a></li>
+                          <li><a href="#">Culinary School Secrets</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Meal Plans</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">My Meal Plan My Way</a></li>
+                          <li><a href="#">Easy Meal Prep</a></li>
+                          <li><a href="#">Family Dinners</a></li>
+                          <li><a href="#">$40 A Week</a></li>
+                          <li><a href="#">$50 A Week</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <li class="menu-item mega-menu">
+                      <a href="#">Products 
+                        <span class="drop_down material-symbols-outlined">
+                          arrow_drop_down
+                      </span>
+                      </a>
+                      <div class="mega-menu-wrapper slideInUp">
+                        <div class="mega-menu-col">
+                          <h5>Menu block 1</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 2</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 3</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 4</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                  </li>
+                  <form class="search-container" onsubmit="handleSearch(event)">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Search" oninput="handleInput(this.value)">
+                    <ul class="suggestions" id="suggestions"></ul>
+                  </form>
+              </ul>
+              <a href="#" id="hamburger-icon" class="mobile-toggler" aria-label="Mobile Menu"><i class="fas fa-bars"></i></a>
+          </div>
+
+          <!-- Mobile menu -->
+          <div id="mobile-menu" class="mobile-menu hidden slideInDown">
+            <ul>
+                <li class="menu-item"><a href="{{url_for ('index')}}" class="active">Home</a></li>
+
+                <li class="menu-item mega-menu">
+                    <a href="#">Recipes</a>
+                    <div class="mega-menu-wrapper">
+                        <div class="mega-menu-col">
+                            <h5>Popular</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="{{url_for('popular_recipe')}}">Getting Back to Basics</a></li>
+                                <li><a href="#">Easy Dinners</a></li>
+                                <li><a href="#">Work Lunches</a></li>
+                                <li><a href="#">5 Ingredient Meals</a></li>
+                                <li><a href="#">St. Patrick's Day</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Right Now</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Slow Cooker Recipes</a></li>
+                                <li><a href="#">Latest Recipes</a></li>
+                                <li><a href="#">Family Dinners</a></li>
+                                <li><a href="#">Plant-Based Meals</a></li>
+                                <li><a href="#">Date Night</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Ingredients</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Chicken</a></li>
+                                <li><a href="#">Pasta</a></li>
+                                <li><a href="#">Pineapple</a></li>
+                                <li><a href="#">Potato</a></li>
+                                <li><a href="#">Beef</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Diet</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Vegetarian</a></li>
+                                <li><a href="#">Low Carb</a></li>
+                                <li><a href="#">High Protein</a></li>
+                                <li><a href="#">Vegan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="menu-item mega-menu">
+                  <a href="#">Tips & Tricks</a>
+                  <div class="mega-menu-wrapper">
+                      <div class="mega-menu-col">
+                          <h5>Kitchen Tips & Skills</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="{{url_for('Tips_Tricks')}}">Our Best Everyday Tips</a></li>
+                              <li><a href="#">Mistakes to Avoid</a></li>
+                              <li><a href="#">Advice from Chefs</a></li>
+                              <li><a href="#">Baking Basics</a></li>
+                              <li><a href="#">Culinary School Secrets</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Food Hacks</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">Flavor Hacks</a></li>
+                              <li><a href="#">Storage Hacks</a></li>
+                              <li><a href="#">Baking Hacks</a></li>
+                              <li><a href="#">Egg Hacks</a></li>
+                              <li><a href="#">Pizza Hacks</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Appliance Cooking</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">Instant Pot Tricks</a></li>
+                              <li><a href="#">Crock Pot Pasta</a></li>
+                              <li><a href="#">Air Fryer Recipes</a></li>
+                              <li><a href="#">Microwave Meals</a></li>
+                              <li><a href="#">Food Processors Hacks</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Meal Plans</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">My Meal Plan My Way</a></li>
+                              <li><a href="#">Easy Meal Prep</a></li>
+                              <li><a href="#">Family Dinners</a></li>
+                              <li><a href="#">$40 A Week</a></li>
+                              <li><a href="#">$50 A Week</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+
+              <li class="menu-item mega-menu">
+                <a href="#">Products</a>
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-col">
+                        <h5>Menu block 1</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 2</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 3</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 4</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                  
+                    </div>
+                
+                </div>
+                
+            </li>
+              <script src="{{ url_for('static', filename='scripts/script.js')}}"></script>
+  </header>
+
+  
+    <!--<div class="container swiper">
+     
+      <div class="slide-container">
+        <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+           
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe1.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+              
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe2.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+               
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe3.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe4.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe2.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+  
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div>-->
+
+      
+    
+      <div class="recipe-submission">
+        <div class="recipe-form">
+            <div class="recipe-form-title">
+                <p>Submit your Recipe to Tasty!</p>
+            </div>
+            <div class="recipe-form-subtext">
+                <p>Tasty is looking for new recipes and wants to feature YOURS on the Tasty website! Got a recipe
+                    that's been passed down in the family? A new recipe you came up with?</p>
+                <p>.</p>
+                <p>By submitting any content for consideration, you agree to the BuzzFeed Materials Release</p>
+            </div>
+            <div class="recipe-image">
+                <img src="{{url_for('static', filename='images/burger.jpeg')}}" alt="">
+            </div>
+            <div class="recipe-form-subtext1">
+                <p class="recipe-details">Recipe Details</p>
+                <label class="recipe-title" for="name">Recipe Title*</label><br>
+                <input class="recipe-title-box" type="text" id="name" name="name"><br>
+                <label class="recipe-servings" for="name">Number of Servings*</label><br>
+                <input class="recipe-servings-box" type="text" id="name" name="name"><br>
+                <label class="recipe-ingredients" for="name">Ingredients*</label><br>
+                <textarea class="recipe-ingredients-box" id="message" name="message" placeholder="2 cups of milk"></textarea><br>
+                <p class="recipe-p1">Please enter your recipe ingredients.</p>
+                <p class="recipe-p2">Please put each ingredient and its measurement on its own line.</p>
+                <label class="recipe-directions" for="name">Directions*</label><br>
+                <textarea class="recipe-directions-box" id="message" name="message" placeholder="Mekus mekus na yan insan"></textarea><br>
+                <label class="recipe-photo" for="photo">Upload the photo you took of the dish*</label><br>
+                <div class="recipe-photo-btn-wrapper">
+                    <button class="photo-btn">Upload Photo</button>
+                    <input type="file" name="photo" accept="image/*">
+                    <p class="recipe-p3">PNG or JPEG, max 10MB</p>
+                </div>
+                <div class="recipe-credit">
+                    <p class="recipe-p4">Recipe Credit</p>
+                    <div class="recipe-user-info">
+                        <p>First Name</p>
+                        <p>Last Name</p>
+                    </div>
+                    <div class="recipe-user-info-box">
+                        <input class="recipe-fname-box" type="text" id="name" name="name"><br>
+                        <input class="recipe-lname-box" type="text" id="name" name="name"><br>
+                    </div>
+                    <label class="recipe-email" for="name">Email*</label><br>
+                    <input class="recipe-email-box" type="text" id="name" name="name"><br>
+                    <p class="recipe-p5">This information will not be displayed with the recipe</p>
+                </div>
+                <input class="recipe-submission-box" type="submit" value="Submit your Recipe">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer xs-z4 xs-mt4">
+      <div class="footer__content md-flex">
+        <div class="footer__column footer__column--left md-col-6">
+          <svg aria-labelledby="tasty_logo_footer" class="footer__logo" role="img">
+            <title id="tasty_logo_footer">Tasty Logo Footer</title>
+            <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#tasty-logo"></use>
+          </svg>
+          <div class="footer__app-badges footer__app-badges--mobile md-hide xs-mb5 xs-text-3">
+            <div class="extra-bold xs-mb1">Get the Tasty App</div>
+            <div class="xs-flex">
+              <a class="app-badge app-badge--ios xs-mr1__web-inspector-hide-shortcut__" href="https://apps.apple.com/us/app/tasty/id1217456898?itsct=apps_box_badge&itscg=30200">
+                <img alt="Download on the App Store" class="app-badge__image app-badge__image--ios" src="{{url_for('static', filename='images/AppStore.png')}}">
+              </a>
+              <a class="app-badge app-badge--android" href="https://play.google.com/store/apps/details?id=com.buzzfeed.tasty&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                <img alt="Get it on Google Play" class="app-badge__image app-badge__image--android" src="{{url_for('static', filename='images/google-store.png')}}">
+              </a>
+            </div>
+          </div>
+          <div class="footer__newsletter xs-flex xs-flex-align-items">
+            <div class="newsletter newsletter--inline">
+              <form class="newsletter__form newsletter__form--inline" id="news;etter-inline" target="_top">
+                <div>
+                  <div>
+                   <h2 class="newsletter__header newsletter__header--inline xs-mb1 xs-text-3 extra-bold">Get the Tasty Newsletter</h2>
+                   <div class="newsletter__content xs-relative newsletter__content--inline">
+                    <div class="newsletter__input newsletter__input-wrapper--inline">
+                      <label class="newslettter__input-label" for="newsletter-email-inline" >
+                        <span class="newsletter__input-label-text">Email Address</span>
+                        "(required)"
+                      </label>
+                      <input type="email" autocomplete="email" class="newsletter__input newsletter__input--inline" id="newsletter-email-inline" name="email"
+                      placeholder="Your email address" required>
+                      <button class="newsletter__submit newsletter__submit--inline button--tasty extra-bold" type="submit" value="Sign Up">Sign Up</button>
+                      <div class="newsletter__input-disclaimer">
+                        "This site is protected by reCAPTCHA and the Google" 
+                        <a class="newsletter__input-disclaimer-link" href="https://policies.google.com/privacy" >Privacy</a>
+                        "and"
+                        <a class="newsletter__input-disclaimer-link" href="https://policies.google.com/terms" >Terms</a>
+                        "apply"
+                      </div>
+                    </div>
+  
+  
+                   </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+  
+            </div>
+          </div>
+          <ul class="footer__links-container">
+            <li>
+              <a class="footer-link" href="mailto:support@buzzfeed.com?subject=Tasty.co User Support&body=%0A%0A----------------------- %0A%0ALink:https%3A%2F%2Ftasty.co%2F" >Send feedback</a>
+            </li>
+            <li>
+              <a class="footer-link" href="/ingredient" >Recipes by Ingredient</a>
+            </li>
+            <li>
+              <a class="footer-link" href="/topic/community" >Community Recipes</a>
+            </li>
+            <li>
+              <a class="footer-link" href="https://www.buzzfeed.com/about/privacy?country=en-us" target="_blank" aria-describedby="new-window-external" rel="noopener noreferrer">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="footer-link" href="https://www.buzzfeed.com/about/useragreement?country=en-us" target="_blank" aria-describedby="new-window-external" rel="noopener noreferrer" >User Aggrement</a>
+            </li>
+            <li>
+              <a class="footer-link" href="/accessibility" >Accessibility Statement</a>
+            </li>
+            <li>
+              <a class="footer-link" href="/tastyvalues" >Our Tasty Values</a>
+            </li>
+          </ul>
+        <div class="footer_newsletter xs-flex xs-flex-align-itms">
+      <div class="newsletter newsletter--inline">
+        <form class="newsletter__form newsletter__form--inline" id="newsletter-inline" target="_top">
+          <div>
+            <div>
+            
+          <div class="newsletter__success newsletter__success--inline xs-col-12 xs-mx-auto">
+            <p class="newsletter__sucess-header extra-bold xs-mb1">Let's get Cooking</p>
+            <p class="newsletter__success-body">Stay tuned for your first newsletter!</p>
+          </div>
+        </form>
+      </div>
+      <div class="xs-mb4">
+        <div class="social-buttons">
+          <div class="social-buttons__heading">Follow Tasty</div>
+          <ul class="social-buttons__list">
+            <li>
+              <a class="social-button" href="https://www.facebook.com/buzzfeedtasty/" aria-label="Go to Tasty on Facebook">
+                <img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="https://twitter.com/tasty" aria-label="Go to Tasty on Twitter">
+                <img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter">
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="https://www.instagram.com/buzzfeedtasty" aria-label="Go to Tasty on Instagram">
+                <img src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Instagram">
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="https://www.youtube.com/buzzfeedtasty" aria-label="Go to Tasty on Youtube">
+                <img src="{{ url_for('static', filename='images/yt-icon.png') }}" alt="YouTube">
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      <div class="footer__copyright xs-hide md-block">&copy 2023 Buzzfeed, Inc</div>
+    </div>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='scripts/search.js')}}"></script>
+    
+  </body>
+</html>

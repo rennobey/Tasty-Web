@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tasty Web</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">  
+<link rel="stylesheet" href="{{url_for('static', filename='content.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider2-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider3-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider4-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='slider5-style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='popular-recipe.css')}}">
+
+
+  </head>
+  <body>
+    
+    <div class="bottom-div"> </div>
+    <span class="follow-us">Follow Us</span>
+    <span class="facebook">Facebook</span>
+    <span class="instagram">Instagram</span>
+    <span class="x">X | Twitter</span>
+    <span class="youtube">Youtube</span>
+
+    <img
+  loading="lazy"
+  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdd6e7462bdc1e74ee01709f00218ee1c5ebd1211398186c144b83cf2898dd99?"
+  class="fbook"/>
+  <img
+  loading="lazy"
+  src="https://cdn.builder.io/api/v1/image/assets/TEMP/18bf661a9fe4de09e88b289acb4d07ef391c3c73f00b769014c53f4c50c8af0d?"
+  class="insta"/>
+  <img
+  loading="lazy"
+  src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fded50252f3311faf8ba7a176640a2132d9b53fb09a8cb046df011013f6e46f?"
+  class="tweet"/>
+  <img
+  loading="lazy"
+  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3665e16cde61d69a595cf6affaeda5b68b31011d004818595bea2c19285404a2?"
+  class="yt"/>
+  <div class="appStore"></div>
+  <div class="google-store"></div>
+  <span class="feedback">Send Feedback</span>
+  <span class="recipe-ingredient">Recipes by Ingredient</span>
+  <span class="community-recipe">Community Recipes</span>
+  <span class="privacy-policy">Privacy Policy</span>
+  <span class="user-agreement">User Agreement</span>
+  <span class="statement">Accessiblity Statement</span>
+  <span class="values">Our Tasty Values</span>
+  <div class="v41_322"></div>
+  <span class="v41_346">© 2023 BuzzFeed, Inc</span>
+
+    <header class="header">
+      <div class="header-row container" role="navigation" aria-label="Main">
+          <div class="header-left">
+              <div class="logo">
+                  <a href="{{url_for ('index')}}"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="logo"></a>
+              </div>
+          </div>
+          <div class="header-right">
+            <ul class="main-menu">
+              <!--<li class="menu-item"><a href="#" class="active">Home</a></li>-->
+              <li class="menu-item mega-menu">
+                <a href="#">Recipes
+                  <span class="drop_down material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                </a>
+                <div class="mega-menu-wrapper slideInUp">
+                  <div class="mega-menu-col">
+                    <h5>Popular</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="{{url_for('popular_recipe')}}">Getting Back to Basics</a></li>
+                      <li><a href="#">Easy Dinners</a></li>
+                      <li><a href="#">Work Lunches</a></li>
+                      <li><a href="#">5 Ingredient Meals</a></li>
+                      <li><a href="#">St. Patrick's Day</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Right Now</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Slow Cooker Recipes</a></li>
+                      <li><a href="#">Latest Recipes</a></li>
+                      <li><a href="#">Family Dinners</a></li>
+                      <li><a href="#">Plant-Based Meals</a></li>
+                      <li><a href="#">Date Night</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Ingredients</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Chicken</a></li>
+                      <li><a href="#">Pasta</a></li>
+                      <li><a href="#">Pineapple</a></li>
+                      <li><a href="#">Potato</a></li>
+                      <li><a href="#">Beef</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-col">
+                    <h5>Diet</h5>
+                    <ul class="mega-sub-menu">
+                      <li><a href="#">Health</a></li>
+                      <li><a href="#">Vegetarian</a></li>
+                      <li><a href="#">Low Carb</a></li>
+                      <li><a href="#">High Protein</a></li>
+                      <li><a href="#">Vegan</a></li>
+                    </ul>
+                  </div>
+
+                  <li class="menu-item mega-menu">
+                    <a href="#">Tips & Tricks 
+                      <span class="drop_down material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                    </a>
+                    <div class="mega-menu-wrapper slideInUp">
+                      <div class="mega-menu-col">
+                        <h5>Food Hacks</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">Flavor Hacks</a></li>
+                          <li><a href="#">Storage Hacks</a></li>
+                          <li><a href="#">Baking Hacks</a></li>
+                          <li><a href="#">Egg Hacks</a></li>
+                          <li><a href="#">Pizza Hacks</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Appliance Cooking</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">Instant Pot Tricks</a></li>
+                          <li><a href="#">Crock Pot Pasta</a></li>
+                          <li><a href="#">Air Fryer Recipes</a></li>
+                          <li><a href="#">Microwave Meals</a></li>
+                          <li><a href="#">Food Processor Hacks</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Kitchen Tips & Skills</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="{{url_for('Tips_Tricks')}}">Our Best Everyday Tips</a></li>
+                          <li><a href="#">Mistakes to Avoid</a></li>
+                          <li><a href="#">Advice from Chefs</a></li>
+                          <li><a href="#">Baking Basics</a></li>
+                          <li><a href="#">Culinary School Secrets</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                        <h5>Meal Plans</h5>
+                        <ul class="mega-sub-menu">
+                          <li><a href="#">My Meal Plan My Way</a></li>
+                          <li><a href="#">Easy Meal Prep</a></li>
+                          <li><a href="#">Family Dinners</a></li>
+                          <li><a href="#">$40 A Week</a></li>
+                          <li><a href="#">$50 A Week</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <li class="menu-item mega-menu">
+                      <a href="#">Products 
+                        <span class="drop_down material-symbols-outlined">
+                          arrow_drop_down
+                      </span>
+                      </a>
+                      <div class="mega-menu-wrapper slideInUp">
+                        <div class="mega-menu-col">
+                          <h5>Menu block 1</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 2</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 3</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                          <h5>Menu block 4</h5>
+                          <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                          </ul>
+                  </li>
+                  <form class="search-container" onsubmit="handleSearch(event)">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Search" oninput="handleInput(this.value)">
+                    <ul class="suggestions" id="suggestions"></ul>
+                  </form>
+              </ul>
+              <a href="#" id="hamburger-icon" class="mobile-toggler" aria-label="Mobile Menu"><i class="fas fa-bars"></i></a>
+          </div>
+
+          <!-- Mobile menu -->
+          <div id="mobile-menu" class="mobile-menu hidden slideInDown">
+            <ul>
+                <li class="menu-item"><a href="{{url_for ('index')}}" class="active">Home</a></li>
+
+                <li class="menu-item mega-menu">
+                    <a href="#">Recipes</a>
+                    <div class="mega-menu-wrapper">
+                        <div class="mega-menu-col">
+                            <h5>Popular</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="{{url_for('popular_recipe')}}">Getting Back to Basics</a></li>
+                                <li><a href="#">Easy Dinners</a></li>
+                                <li><a href="#">Work Lunches</a></li>
+                                <li><a href="#">5 Ingredient Meals</a></li>
+                                <li><a href="#">St. Patrick's Day</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Right Now</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Slow Cooker Recipes</a></li>
+                                <li><a href="#">Latest Recipes</a></li>
+                                <li><a href="#">Family Dinners</a></li>
+                                <li><a href="#">Plant-Based Meals</a></li>
+                                <li><a href="#">Date Night</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Ingredients</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Chicken</a></li>
+                                <li><a href="#">Pasta</a></li>
+                                <li><a href="#">Pineapple</a></li>
+                                <li><a href="#">Potato</a></li>
+                                <li><a href="#">Beef</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h5>Diet</h5>
+                            <ul class="mega-sub-menu">
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Vegetarian</a></li>
+                                <li><a href="#">Low Carb</a></li>
+                                <li><a href="#">High Protein</a></li>
+                                <li><a href="#">Vegan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="menu-item mega-menu">
+                  <a href="#">Tips & Tricks</a>
+                  <div class="mega-menu-wrapper">
+                      <div class="mega-menu-col">
+                          <h5>Kitchen Tips & Skills</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="{{url_for('Tips_Tricks')}}">Our Best Everyday Tips</a></li>
+                              <li><a href="#">Mistakes to Avoid</a></li>
+                              <li><a href="#">Advice from Chefs</a></li>
+                              <li><a href="#">Baking Basics</a></li>
+                              <li><a href="#">Culinary School Secrets</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Food Hacks</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">Flavor Hacks</a></li>
+                              <li><a href="#">Storage Hacks</a></li>
+                              <li><a href="#">Baking Hacks</a></li>
+                              <li><a href="#">Egg Hacks</a></li>
+                              <li><a href="#">Pizza Hacks</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Appliance Cooking</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">Instant Pot Tricks</a></li>
+                              <li><a href="#">Crock Pot Pasta</a></li>
+                              <li><a href="#">Air Fryer Recipes</a></li>
+                              <li><a href="#">Microwave Meals</a></li>
+                              <li><a href="#">Food Processors Hacks</a></li>
+                          </ul>
+                      </div>
+                      <div class="mega-menu-col">
+                          <h5>Meal Plans</h5>
+                          <ul class="mega-sub-menu">
+                              <li><a href="#">My Meal Plan My Way</a></li>
+                              <li><a href="#">Easy Meal Prep</a></li>
+                              <li><a href="#">Family Dinners</a></li>
+                              <li><a href="#">$40 A Week</a></li>
+                              <li><a href="#">$50 A Week</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+
+              <li class="menu-item mega-menu">
+                <a href="#">Products</a>
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-col">
+                        <h5>Menu block 1</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 2</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 3</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-col">
+                        <h5>Menu block 4</h5>
+                        <ul class="mega-sub-menu">
+                            <li><a href="#">Menu block item 1</a></li>
+                            <li><a href="#">Menu block item 2</a></li>
+                            <li><a href="#">Menu block item 3</a></li>
+                            <li><a href="#">Menu block item 4</a></li>
+                            <li><a href="#">Menu block item 5</a></li>
+                        </ul>
+                  
+                    </div>
+                
+                </div>
+                
+            </li>
+              
+              <script src="{{ url_for('static', filename='scripts/script.js')}}"></script>
+  </header>
+
+  
+    <!--<div class="container swiper">
+     
+      <div class="slide-container">
+        <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+           
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe1.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+              
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe2.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+               
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe3.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe4.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+             
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <img src="{{ url_for('static', filename='images/latest-recipe2.jpg')}}" alt="" />
+            </div>
+            <div class="profile-details">
+  
+              <div class="name-job">
+                <h3 class="name">Lorem Ipsum</h3>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div>-->
+
+      <div class="Back-to-basics">
+        <div class="btb-img">
+          <img src="{{url_for('static',filename='images/btb_img.webp')}}" alt="btb">
+        </div>
+        <div class="btb-text">
+          <p class="p1">Getting Back to Basics</p>
+          <p class="p2">Welcome a new era of flavor in the New Year! If rekindling kitchen magic is your resolution, let Tasty be your guide.
+             Discover joy in cooking by making 2024 a tasteful journey back into the heart of your home.</p>
+          <p class="btb-btns"><a href="#">Weekday Meals</a> · <a href="#">One Dish Wonders</a></p>
+          <p class="btb-btns1"> <a href="#">Decadent Dinners</a> · <a href="#">Slow Cooker Scores</a></p>
+        </div> 
+      </div>
+      <div class="weekday-meals">
+        <div class="wm-text">Weekday Meals</div>
+        <div class="wm-contents">
+          <div class="wm-contents1">
+            <a href="{{url_for('Comment_Page')}}"><img src="{{url_for('static', filename='images/chicken & veggie stir fry.webp')}}" alt="1"></a>
+            <p>Chicken & Veggie Stir-Fry</p>
+          </div>
+          <div class="wm-contents2">
+            <img src="{{url_for('static', filename='images/3-Ingredient Teriyaki Chicken.webp')}}" alt="1">
+            <p>3-Ingredient Chicken Teriyaki</p>
+          </div>
+          <div class="wm-contents3">
+            <img src="{{url_for('static', filename='images/Pesto Chicken & Veggies.webp')}}" alt="1">
+            <p>Weekday Meal Prep Pesto Chicken & Veggies</p>
+          </div>
+          <div class="wm-contents4">
+            <img src="{{url_for('static', filename='images/chicken & veggie stir fry.webp')}}" alt="1">
+            <p>Weekday Meal Prep Chicken Teriyaki Stir-Fry</p>
+          </div>
+          <div class="wm-contents5">
+            <img src="{{url_for('static', filename='images/Turkey Taco Bowls.webp')}}" alt="1">
+            <p>Weekday Meal Prep Turkey Taco Bowls</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="one-dish-wonder">
+        <div class="odw-text">One Dish Wonder</div>
+        <div class="odw-contents">
+          <div class="odw-contents1">
+            <img src="{{url_for('static', filename='images/GarlicParmPasta.webp')}}" alt="1">
+            <p>One-Pot Garlic Parmesan Pasta</p>
+          </div>
+          <div class="odw-contents2">
+            <img src="{{url_for('static', filename='images/honey garlic chicken.webp')}}" alt="1">
+            <p>One-Pan Honey Garlic Chicken</p>
+          </div>
+          <div class="odw-contents3">
+            <img src="{{url_for('static', filename='images/Garlic Shrimp Pasta.webp')}}" alt="1">
+            <p>One-Pot Lemon Garlic Shrimp Pasta</p>
+          </div>
+          <div class="odw-contents4">
+            <img src="{{url_for('static', filename='images/Chicken Fajita Pasts.webp')}}" alt="1">
+            <p>One-Pot Chicken Fajita Pasta</p>
+          </div>
+          <div class="odw-contents5">
+            <img src="{{url_for('static', filename='images/Chicken Meal Prep.webp')}}" alt="1">
+            <p>One-Pan Teriyaki Chicken Meal Prep</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="decadent-dinners">
+        <div class="dd-text">Decadent Dinners</div>
+        <div class="dd-contents">
+          <div class="dd-contents1">
+            <img src="{{url_for('static', filename='images/creamy tuscan chicken.webp')}}" alt="1">
+            <p>Creamy Tuscan Chicken</p>
+          </div>
+          <div class="dd-contents2">
+            <img src="{{url_for('static', filename='images/alfredo pasta bake.webp')}}" alt="1">
+            <p>Cheesy Chicken Alfredo Pasta Bake</p>
+          </div>
+          <div class="dd-contents3">
+            <img src="{{url_for('static', filename='images/chicken penne pasta.webp')}}" alt="1">
+            <p>Creamy Chicken Penne Pasta</p>
+          </div>
+          <div class="dd-contents4">
+            <img src="{{url_for('static', filename='images/shrimp bacon alfredo.webp')}}" alt="1">
+            <p>Garlic Shrimp Bacon Alfredo</p>
+          </div>
+          <div class="dd-contents5">
+            <img src="{{url_for('static', filename='images/chicken & rice.webp')}}" alt="1">
+            <p>Paprika Chicken & Rice Bake</p>
+          </div>
+          <!--<div class="dd-contents6">
+            <img src="images/chicken and asparagus.webp" alt="1">
+            <p>Lemon Chicken & Asparagus Stir-Fry</p>
+          </div>-->
+        </div>
+      </div>
+    
+      <div class="slow-cooker-scores">
+        <div class="scs-text">Slow Cooker Scores</div>
+        <div class="scs-contents">
+          <div class="scs-contents1">
+            <img src="{{url_for('static', filename='images/beef and broccolli.webp')}}" alt="1">
+            <p>Slow Cooker Beef & broccolli</p>
+          </div>
+          <div class="scs-contents2">
+            <img src="{{url_for('static', filename='images/chicken and Biscuit.webp')}}" alt="1">
+            <p>Slow Cooker Chicken & Biscuits</p>
+          </div>
+          <div class="scs-contents3">
+            <img src="{{url_for('static', filename='images/potato soup.webp')}}" alt="">
+            <p>Slow Cooker Loaded Potato Soup</p>
+          </div>
+          <div class="scs-contents4">
+            <img src="{{url_for('static', filename='images/pot roast.webp')}}" alt="">
+            <p>The Best Ever Slow Cooker Pot Roast</p>
+          </div>
+          <div class="scs-contents5">
+            <img src="{{url_for('static', filename='images/chicken tacos.webp')}}" alt="">
+            <p>Slow Cooker Shredded Chicken Tacos</p>
+          </div>
+        </div>
+      </div> 
+
+
+      
+      <script src="{{ url_for('static', filename='scripts/search.js')}}"></script> 
+  </body>
+</html>
